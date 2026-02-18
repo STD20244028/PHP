@@ -10,7 +10,7 @@
 <body>
 <?php
 unset($_session['id']);
-$pdo = new PDO('mysql:host=localhost;dbname=r2a12521;charset=utf8','r2a12521','20050602');
+$pdo = new PDO('mysql:host=localhost;dbname=gakusei;charset=utf8','gakuseki','20050602');
 $sql=$pdo->prepare('select * from users where u_name=? and u_pass=?');
 $sql->execute([$_POST['user'],$_POST['pass']]);
 foreach ($sql as $row){
@@ -24,4 +24,5 @@ if(isset($_SESSION['id'])){
 	header('Location:index.php');
 	exit();
 }
+
 ?>
