@@ -26,4 +26,5 @@ foreach ($_SESSION['cart'] as $key => $value){
 unset($_SESSION['cart']);
 ?><br>
 <a href="main.php">メインへ戻る</a>
-
+</body>
+</html>
