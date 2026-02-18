@@ -13,7 +13,7 @@
 <table>
 <tr><th>商品番号</th><th>商品名</th><th>価格</th></tr>
 <?php
-$pdo = new PDO('mysql:host=localhost;dbname=r2a12521;charset=utf8','r2a12521','20050602');
+$pdo = new PDO('mysql:host=localhost;dbname=gakusei;charset=utf8','gakuseki','20050602');
 foreach ($pdo->query('select * from products') as $row){
 ?>
 	<tr>
@@ -26,3 +26,4 @@ foreach ($pdo->query('select * from products') as $row){
 ?>
 </table>
 <a href="logout.php" >ログアウト</a>
+
