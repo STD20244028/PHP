@@ -26,4 +26,5 @@ foreach ($pdo->query('select * from products') as $row){
 ?>
 </table>
 <a href="logout.php" >ログアウト</a>
-
+</body>
+</html>
