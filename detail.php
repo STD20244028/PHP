@@ -18,7 +18,7 @@
 <table>
 <tr><th>商品番号</th><th>商品名</th><th>価格</th></tr>
 <?php
-$pdo = new PDO('mysql:host=localhost;dbname=r2a12521;charset=utf8','r2a12521','20050602');
+$pdo = new PDO('mysql:host=localhost;dbname=gakusei;charset=utf8','gakuseki','20050602');
 $sql=$pdo->prepare('select*from products where p_id=?');
 $sql->execute([$_GET['id']]);
 foreach ($sql as $row){
@@ -36,4 +36,5 @@ foreach ($sql as $row){
 </table>
 <img alt="image" src="image/<?= $_GET['id'] ?>.jpg">
 </body>
+
 </html>
