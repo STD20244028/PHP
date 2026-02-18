@@ -10,7 +10,7 @@
 <body>
 <?php require 'header.php' ?>
 <?php
-$pdo = new PDO('mysql:host=localhost;dbname=r2a12521;charset=utf8','r2a12521','20050602');
+$pdo = new PDO('mysql:host=localhost;dbname=gakusei;charset=utf8','gakuseki','20050602');
 $sql1 = $pdo -> prepare("INSERT INTO orders values(null,?,?,?,?,?,?,0)");
 $sql1 -> execute([$_SESSION['id'],$_POST['postcode'],$_POST['address'],$_POST['name'],$_POST['phone'],$_POST['pay']]);
 $oid = $pdo ->lastInsertId('o_id');
@@ -26,3 +26,4 @@ foreach ($_SESSION['cart'] as $key => $value){
 unset($_SESSION['cart']);
 ?><br>
 <a href="main.php">メインへ戻る</a>
+
