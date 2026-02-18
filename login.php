@@ -26,3 +26,5 @@ if(isset($_SESSION['id'])){
 }
 
 ?>
+</body>
+</html>
